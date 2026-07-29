@@ -1,6 +1,6 @@
 {
   "name": "create-fastify-typescript",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A starter project for Fastify with TypeScript",
   "keywords": [
     "create-fastify",
@@ -31,7 +31,6 @@
     "bin",
     "config",
     "decorators",
-    "dist",
     "package-lock.json",
     "package.json",
     "plugins",
