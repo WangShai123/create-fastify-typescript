@@ -1,6 +1,6 @@
 {
   "name": "create-fastify-typescript",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A starter project for Fastify with TypeScript",
   "keywords": [
     "create-fastify",
@@ -48,27 +48,17 @@
   ],
   "type": "module",
   "main": "./dist/app.js",
-  "types": "./dist/app.d.ts",
   "exports": {
-    ".": {
-      "types": "./dist/app.d.ts",
-      "import": "./dist/app.js"
-    },
-    "./app": {
-      "types": "./dist/app.d.ts",
-      "import": "./dist/app.js"
-    },
-    "./server": {
-      "types": "./dist/server.d.ts",
-      "import": "./dist/server.js"
-    },
+    ".": "./dist/app.js",
+    "./app": "./dist/app.js",
+    "./server": "./dist/server.js",
     "./package.json": "./package.json"
   },
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
-    "build": "node scripts/clean-dist.ts && tsc -p tsconfig.json && node dist/scripts/copy-assets.js",
+    "build": "node scripts/clean-dist.ts && tsc -p tsconfig.json && node scripts/copy-assets.ts",
     "check": "vp check",
     "dev": "node --watch server.ts",
     "start": "node dist/server.js",

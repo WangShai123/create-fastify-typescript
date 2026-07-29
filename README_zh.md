@@ -1,5 +1,7 @@
 # create-fastify-typescript
 
+[English](README.md)
+
 一个面向 Node.js 24+ 的 Fastify + TypeScript 项目模板。可以通过下面的方式创建项目：
 
 ```bash

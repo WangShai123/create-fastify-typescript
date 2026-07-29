@@ -1,5 +1,7 @@
 # create-fastify-typescript
 
+[中文](README_zh.md)
+
 A Fastify + TypeScript project template for Node.js 24+. Create a new project with:
 
 ```bash
