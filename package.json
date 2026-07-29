@@ -1,6 +1,6 @@
 {
   "name": "create-fastify-typescript",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "A starter project for Fastify with TypeScript",
   "keywords": [
     "create-fastify",
@@ -21,7 +21,7 @@
     "url": "git+https://github.com/WangShai123/create-fastify-typescript.git"
   },
   "bin": {
-    "create-fastify-typescript": "./bin/create.ts"
+    "create-fastify-typescript": "./bin/create.js"
   },
   "files": [
     ".env.example",

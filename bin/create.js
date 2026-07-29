@@ -8,9 +8,16 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const packageRoot = resolve(__dirname, '..');
 
+const gitIgnoreContent = `.DS_Store
+.vscode
+.env
+node_modules
+dist
+coverage
+`;
+
 const templateEntries = [
   '.env.example',
-  '.gitignore',
   'README.md',
   'README_zh.md',
   'app.ts',
@@ -56,9 +63,11 @@ for (const entry of templateEntries) {
   });
 }
 
+await writeFile(join(targetDir, '.gitignore'), gitIgnoreContent);
+
 const packageJson = JSON.parse(
   await readFile(join(packageRoot, 'package.json'), 'utf8')
-) as Record<string, unknown>;
+);
 
 const projectPackage = {
   name: targetName,
