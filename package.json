@@ -1,0 +1,103 @@
+{
+  "name": "create-fastify-typescript",
+  "version": "1.0.0",
+  "description": "A starter project for Fastify with TypeScript",
+  "keywords": [
+    "create-fastify",
+    "fastify",
+    "fastify-template",
+    "starter",
+    "template",
+    "typescript"
+  ],
+  "homepage": "https://github.com/WangShai123/create-fastify-typescript",
+  "bugs": {
+    "url": "https://github.com/WangShai123/create-fastify-typescript/issues"
+  },
+  "license": "ISC",
+  "author": "Wang Shai <hiwangshai@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WangShai123/create-fastify-typescript.git"
+  },
+  "bin": {
+    "create-fastify-typescript": "./bin/create.ts"
+  },
+  "files": [
+    ".env.example",
+    "README.md",
+    "README_zh.md",
+    "app.ts",
+    "bin",
+    "config",
+    "decorators",
+    "dist",
+    "package-lock.json",
+    "package.json",
+    "plugins",
+    "routes",
+    "scripts",
+    "server.ts",
+    "services",
+    "templates",
+    "tests",
+    "tsconfig.json",
+    "types",
+    "utilities",
+    "vite.config.ts"
+  ],
+  "type": "module",
+  "main": "./dist/app.js",
+  "types": "./dist/app.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/app.d.ts",
+      "import": "./dist/app.js"
+    },
+    "./app": {
+      "types": "./dist/app.d.ts",
+      "import": "./dist/app.js"
+    },
+    "./server": {
+      "types": "./dist/server.d.ts",
+      "import": "./dist/server.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "node scripts/clean-dist.ts && tsc -p tsconfig.json && node dist/scripts/copy-assets.js",
+    "check": "vp check",
+    "dev": "node --watch server.ts",
+    "start": "node dist/server.js",
+    "test": "vp test"
+  },
+  "dependencies": {
+    "@fastify/autoload": "^6.5.0",
+    "@fastify/cors": "^11.3.0",
+    "@fastify/env": "^7.0.0",
+    "@fastify/jwt": "^10.2.1",
+    "@fastify/mysql": "^5.0.2",
+    "@fastify/rate-limit": "^11.2.0",
+    "@fastify/redis": "^8.0.0",
+    "@fastify/view": "^12.0.0",
+    "bcrypt": "^6.0.0",
+    "dayjs": "^1.11.21",
+    "ejs": "^6.0.1",
+    "fastify": "^5.10.0",
+    "fastify-raw-body": "^5.0.0",
+    "mysql2": "^3.23.2"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.2",
+    "esbuild": "^0.28.1",
+    "typescript": "^7.0.2",
+    "vite": "8.1.5",
+    "vite-plus": "^0.2.6"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  }
+}
