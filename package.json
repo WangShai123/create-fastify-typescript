@@ -1,7 +1,7 @@
 {
   "name": "create-fastify-typescript",
-  "version": "1.0.4",
-  "description": "A starter project for Fastify with TypeScript",
+  "version": "1.0.5",
+  "description": "A starter for Fastify with TypeScript",
   "keywords": [
     "create-fastify",
     "fastify",
@@ -64,6 +64,7 @@
     "test": "vp test"
   },
   "dependencies": {
+    "@date-fns/tz": "^1.5.0",
     "@fastify/autoload": "^6.5.0",
     "@fastify/cors": "^11.3.0",
     "@fastify/env": "^7.0.0",
@@ -72,10 +73,11 @@
     "@fastify/rate-limit": "^11.2.0",
     "@fastify/redis": "^8.0.0",
     "@fastify/view": "^12.0.0",
-    "bcrypt": "^6.0.0",
-    "dayjs": "^1.11.21",
+    "bcryptjs": "^3.0.3",
+    "date-fns": "^4.4.0",
+    "decimal.js": "^10.6.0",
     "ejs": "^6.0.1",
-    "fastify": "^5.10.0",
+    "fastify": "^5.11.0",
     "fastify-raw-body": "^5.0.0",
     "mysql2": "^3.23.2"
   },
@@ -83,8 +85,8 @@
     "@types/node": "^26.1.2",
     "esbuild": "^0.28.1",
     "typescript": "^7.0.2",
-    "vite": "8.1.5",
-    "vite-plus": "^0.2.6"
+    "vite": "8.2.0",
+    "vite-plus": "^0.2.7"
   },
   "engines": {
     "node": ">=24.0.0"

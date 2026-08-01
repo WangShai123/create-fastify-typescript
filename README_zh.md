@@ -132,3 +132,7 @@ fastify.get('/test', async (_request, reply) => {
   });
 });
 ```
+
+## 部署
+
+使用 `npm run build` 打包项目后，直接部署 `dist/` 到生产环境即可。

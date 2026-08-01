@@ -132,3 +132,7 @@ fastify.get('/test', async (_request, reply) => {
   });
 });
 ```
+
+## Deployment
+
+Deploy the `dist/` directory to production environment after building the project with `npm run build`.
